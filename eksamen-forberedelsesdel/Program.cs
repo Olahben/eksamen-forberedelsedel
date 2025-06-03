@@ -1,9 +1,9 @@
 ﻿// A:
 int integer = 10;
-string textstring = "Hello, World!";
+string textstring = "Hei, Verden!";
 
-Console.WriteLine("A: Integer: " + integer);
-Console.WriteLine("A: Text: " + textstring);
+Console.WriteLine("A: Heltall: " + integer);
+Console.WriteLine("A: Tekst: " + textstring);
 
 
 // B:
@@ -11,16 +11,16 @@ Random random = new Random();
 
 int number = random.Next(-50, 50);
 if (number == 0)
-    Console.WriteLine("B: Number is zero");
+    Console.WriteLine("B: Tallet er null");
 else if (number < 0)
-    Console.WriteLine("B: Number is negative: " + number);
+    Console.WriteLine("B: Tallet er negativt: " + number);
 else
-    Console.WriteLine("B: Number is positive: " + number);
+    Console.WriteLine("B: Tallet er positivt: " + number);
 
 // C:
 static void Multiply(int a, int b)
 {
-    Console.WriteLine("C: Result: " + (a * b));
+    Console.WriteLine($"C: Resultatet av å multiplisere {a} med {b}: " + (a * b));
 }
 
 Multiply(5, 10);
@@ -34,7 +34,7 @@ static void Divide(int a, int b)
     }
     catch (DivideByZeroException)
     {
-        Console.WriteLine("D: Cannot divide by zero.");
+        Console.WriteLine("D: Kan ikke dele på 0.");
         return;
     }
 }
@@ -42,26 +42,26 @@ Divide(10, 0);
 
 
 // E:  
-Console.WriteLine("E: Enter your age as an int:");
+Console.WriteLine("E: Skriv inn alderen din som et heltall:");
 string input = Console.ReadLine();
 if (int.TryParse(input, out int age))
 {
-    Console.WriteLine($"E: Your age is {age}");
+    Console.WriteLine($"E: Alderen din er {age}");
 }
 else
 {
-    Console.WriteLine("E: Invalid input. Please enter a valid integer.");
+    Console.WriteLine("E: Ugyldig inndata, kunne ikke hente ut et heltall.");
 }
 
-Console.WriteLine("E: Enter your name:");
+Console.WriteLine("E: Skriv inn ditt navn:");
 string name = Console.ReadLine();
 if (!string.IsNullOrEmpty(name))
 {
-    Console.WriteLine($"E: Name is {name}");
+    Console.WriteLine($"E: Navnet ditt er {name}");
 }
 else
 {
-    Console.WriteLine("E: Name cannot be empty.");
+    Console.WriteLine("E: Navnet er tomt.");
 }
 
 string output = $"Hei {name}, du er {age} år gammel.";
@@ -75,7 +75,7 @@ numbers.Add(3);
 
 numbers.RemoveAt(numbers.Count - 1); // Remove last element
 int length = numbers.Count;
-Console.WriteLine("F: Length of the list: " + length);
+Console.WriteLine("F: Lengden av listen: " + length);
 
-Console.WriteLine("F: Numbers in the list:");
-numbers.ForEach(n => Console.WriteLine("F: Number: " + n));
+Console.WriteLine("F: Tall i listen:");
+numbers.ForEach(n => Console.WriteLine("F: Tall: " + n));
