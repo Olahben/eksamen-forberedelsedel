@@ -2,8 +2,8 @@
 int integer = 10;
 string textstring = "Hei, Verden!";
 
-Console.WriteLine("A: Heltall: " + integer);
-Console.WriteLine("A: Tekst: " + textstring);
+Console.WriteLine("A: Heltall sin datatype er: " + integer.GetType().ToString());
+Console.WriteLine("A: Tekststrengen sin datatype er: " + textstring.GetType().ToString());
 
 
 // B:
