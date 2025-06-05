@@ -18,12 +18,12 @@ else
     Console.WriteLine("B: Tallet er positivt: " + number);
 
 // C:
-static void Multiply(int a, int b)
+static double Multiply(int a, int b)
 {
-    Console.WriteLine($"C: Resultatet av å multiplisere {a} med {b}: " + (a * b));
+    return a * b;
 }
 
-Multiply(5, 10);
+Console.WriteLine($"Resultatet av multiplikasjonen er {Multiply(5, 10)}");
 
 // D:
 static void Divide(int a, int b)
